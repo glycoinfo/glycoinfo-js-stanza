@@ -5,16 +5,8 @@ Handlebars.registerHelper('wurcsNothingFound', function (data) {
 });
 
 Stanza(function (stanza, params) {
-  // switch endpoint
-  var hostname = window.location.hostname ;
-  console.log('host: %s', hostname);
-  if (hostname == 'glytoucan.org' || hostname == 'pre.glytoucan.org') {
-    var sEndpoint = "https://ts.glytoucan.org/sparql";
-  } else {
-    var sEndpoint = "http://test.ts.glytoucan.org/sparql";
-  }
+  var sEndpoint = "http://test.ts.glycoinfo.org/sparql";
   console.log('endpoint: %s', sEndpoint);
-
   var q = stanza.query({
     endpoint: sEndpoint,
     template: "stanza.rq",
