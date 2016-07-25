@@ -3,7 +3,7 @@ services:
   glycoinfo-stanza:
     build: docker-glycoinfo-stanza
     ports:
-      - 8081:8080
+      - 8082:8080
     volumes: 
     # the dockerfile uses /app/glytoucan-js-stanza so glytoucan-js-stanza should be in workspace
       # - .:/app
