@@ -1,0 +1,13 @@
+version: '2'
+services:
+  glycoinfo-stanza:
+    build: docker-glycoinfo-stanza
+    ports:
+      - 8081:8080
+    volumes: 
+    # the dockerfile uses /app/glytoucan-js-stanza so glytoucan-js-stanza should be in workspace
+      # - .:/app
+      - ./stanza_provider:/stanza/stanza_provider
+      - /etc/localtime:/etc/localtime
+    working_dir: /stanza/stanza_provider
+    restart: always
