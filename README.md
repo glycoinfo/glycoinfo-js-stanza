@@ -35,19 +35,7 @@ $ docker ps
 CONTAINER ID        IMAGE                              COMMAND                  CREATED             STATUS              PORTS                    NAMES
 36be404ce18e        glycoinfostanza_glycoinfo-stanza   "/stanza/ts_0.0.8_lin"   50 minutes ago      Up 50 minutes       0.0.0.0:8082->8080/tcp   glycoinfostanza_glycoinfo-stanza_1
 
-$ docker exec glycoinfostanza_glycoinfo-stanza_1 /stanza/ts_0.0.8_linux_amd64/ts new {stanza_name} 
+$ docker exec glycoinfostanza_glycoinfo-stanza_1 ts new {stanza_name} 
 ```
 
 
-<!-- ## deploy to glycoinfo web server
-
-glycoinfo-stanza is deploied automatically by Jenkins when you push the update by git. 
-
-```
-$ git add {youre updated file}
-$ git commit -m "your comment"
-$ git push
-``` 
-
-Open http://test.stanza.glycoinfo.org/stanza/ with your web browser.
- -->
