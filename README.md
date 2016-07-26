@@ -39,7 +39,7 @@ $ docker exec glycoinfostanza_glycoinfo-stanza_1 /stanza/ts_0.0.8_linux_amd64/ts
 ```
 
 
-## deploy to glycoinfo web server
+<!-- ## deploy to glycoinfo web server
 
 glycoinfo-stanza is deploied automatically by Jenkins when you push the update by git. 
 
@@ -50,3 +50,4 @@ $ git push
 ``` 
 
 Open http://test.stanza.glycoinfo.org/stanza/ with your web browser.
+ -->
