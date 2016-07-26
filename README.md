@@ -49,4 +49,4 @@ $ git commit -m "your comment"
 $ git push
 ``` 
 
-Open http://fly.glycoinfo.org:8082/stanza/ with your web browser.
+Open http://test.stanza.glycoinfo.org/stanza/ with your web browser.
