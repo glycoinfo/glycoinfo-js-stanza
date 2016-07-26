@@ -23,5 +23,5 @@ EXPOSE 8080
 # CMD ["/stanza/ts_0.0.8_linux_amd64/ts", "server"]
 # CMD ["/usr/local/bin/ts", "server"]
 # CMD ["/stanza/ts_0.0.8_linux_amd64/ts", "build"]
-CMD ["ts", "build"]
+CMD ["ts", "server"]
 
