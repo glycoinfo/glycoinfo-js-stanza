@@ -18,7 +18,6 @@ $ git clone https://github.com/glycoinfo/glycoinfo-stanza.git
 run docker-compose and stanza
 
 ```
-$ git clone https://github.com/glycoinfo/glycoinfo-stanza.git
 $ cd glycoinfo-stanza/
 $ docker-compose up
 ```
