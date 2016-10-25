@@ -41,100 +41,63 @@ code {
 	font-weight: bold;
 	text-align: center;
 }
+.invisible{
+	display: none;
+}
+.hide {
+	display:none;
+}
+div.foot {
+	font-size: 14px;
+	text-align: right;
+}
+div.pdbtitle {
+	text-align: left;
+}
 </style>
 <div class="glyconavi">
 	
 	<div>
 <form>
-	<script type="text/javascript">
-console.log("start1");
-function entryChange1(){
-	console.log("start");
-	radio = document.getElementsByName('entryPlan') 
-	if(radio[0].checked) {
-		console.log("checked 0");
-		document.getElementById('firstCCBox').style.display = "";
-		document.getElementById('secondCCBox').style.display = "none";
-		document.getElementById('thirdCCBox').style.display = "none";
-		document.getElementById('firstBox').style.display = "";
-		document.getElementById('secondBox').style.display = "none";
-		document.getElementById('thirdBox').style.display = "none";
 
-	}else if(radio[1].checked) {
-		document.getElementById('firstCCBox').style.display = "none";
-		document.getElementById('secondCCBox').style.display = "";
-		document.getElementById('thirdCCBox').style.display = "none";
-		document.getElementById('firstBox').style.display = "none";
-		document.getElementById('secondBox').style.display = "";
-		document.getElementById('thirdBox').style.display = "none";
+<div class="pdbtitle">
+<a> Protein Data Bank (PDB)</a>
+</div>
+<!-- http://wataame.sumomo.ne.jp/archives/1910 -->
+<!--
+<p class="glyconavi_table_radio">
+<input type="radio" name="databasetype" value="1" checked="checked" >PDBj
+<input type="radio" name="databasetype" value="2" >PDBe
+<input type="radio" name="databasetype" value="3" >RCSB PDB
+</p>
+-->
 
-	}else if(radio[2].checked) {
-		document.getElementById('firstCCBox').style.display = "none";
-		document.getElementById('secondCCBox').style.display = "none";
-		document.getElementById('thirdCCBox').style.display = "";
-		document.getElementById('firstBox').style.display = "none";
-		document.getElementById('secondBox').style.display = "none";
-		document.getElementById('thirdBox').style.display = "";
-	}
-}
-//オンロードさせ、リロード時に選択を保持
-window.onload = entryChange1;
-</script>
-<table>
-<caption>
-<b>
-<a href="http://wwpdb.org/" target="_blank">Protein Data Bank</a>
-</b>
-<small>
-<a href="http://rdf.wwpdb.org/pdb/" target="_blank"> RDF</a>
-</small>
-<details>
-<summary>Notes</summary>
-<p>GlyTouCan provides Accession Number for a carbohydrate moiety of a glycan structure. These links may not be a link with a complete chemical structure.</p>
-</details>
-</caption>
-
-<tr>
-
-<td class="glyconavi_table_radio" rowspan="5"  width="120">
-<label><input type="radio" name="entryPlan" value="PDBj" onclick="entryChange1();" checked="checked" />PDBj</label>
-</br>
-<label><input type="radio" name="entryPlan" value="PDBe" onclick="entryChange1();" />PDBe</label>
-</br>
-<label><input type="radio" name="entryPlan" value="RCSB" onclick="entryChange1();" />RCSB PDB</label>
-</td>
-	<tr>
-		<td><a href="http://wwpdb.org/data/ccd" target"_blank" >Chemical Component</a></td>
-	</tr>
-	<tr>
+<br>
+PDBj Chemical Component
+<br>
 {{#each data}}
-		<td id="firstCCBox">
-			<a href="http://pdbj.org/chemie/summary/{{ccid.value}}" target="_blank">{{ccid.value}}</a><a>PDBJ </a>
-		</td>
-		<td id="secondCCBox">
-			<a href="http://www.ebi.ac.uk/pdbe-srv/pdbechem/chemicalCompound/show/{{ccid.value}}" target="_blank">{{ccid.value}}</a><a>PDBe </a>
-		</td>
-		<td id="thirdCCBox">
-			<a href="http://www.rcsb.org/pdb/ligand/ligandsummary.do?hetId={{ccid.value}}" target="_blank">{{ccid.value}}</a><a>RCSB PDB </a>
-		</td>
+		<a class="pdbj" href="http://pdbj.org/chemie/summary/{{ccid.value}}" target="_blank">{{ccid.value}}</a><a> </a>
+{{/each}}
+<br>
+PDBe Chemical Component
+<br>
+{{#each data}}
+		<a class="pdbe" href="http://www.ebi.ac.uk/pdbe-srv/pdbechem/chemicalCompound/show/{{ccid.value}}" target="_blank">{{ccid.value}}</a><a> </a>
+{{/each}}
+<br>
+RCSB PDB Chemical Component
+<br>
+{{#each data}}
+		<a class="rcsb" href="http://www.rcsb.org/pdb/ligand/ligandsummary.do?hetId={{ccid.value}}" target="_blank">{{ccid.value}}</a><a> </a>
+{{/each}}
 
-		<!-- <pre><code>{{ccid.value}}</code></pre> -->
-
-	{{/each}}
-		
-	</tr>
-	{{#glyconaviNothingFound data}}{{/glyconaviNothingFound}}
-</tr>
+{{#glyconaviNothingFound data}}{{/glyconaviNothingFound}}
 <!-- 表示非表示切り替え -->
 
-</table>
-
-<tfoot class="glyconavi_table_tfoot">
-<tr><td colspan="2">
-<small>from <a href="http://glyconavi.org" target="_blank">GlycoNAVI</a></small>
-</td>
-</tr>
-</tfoot>
+<br>
+<div class="foot">
+<a href="http://glyconavi.org" target="_blank">from GlycoNAVI</a>
+</div>
 
 </form>
 </div>

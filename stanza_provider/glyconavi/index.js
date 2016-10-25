@@ -15,6 +15,7 @@ Stanza(function (stanza, params) {
       accessionNumber: params.acc
     }
   });
+
   q.done(function (data) {
     stanza.render({
       template: "stanza.html",
@@ -22,8 +23,6 @@ Stanza(function (stanza, params) {
         data: data.results.bindings
       },
     });
-    console.log("start!");
-    // script
   });
   q.fail(function (jqXHR) {
     console.log(jqXHR);
