@@ -76,13 +76,13 @@ PDBj Chemical Component
 {{#each data}}
 		<a class="pdbj" href="http://pdbj.org/chemie/summary/{{ccid.value}}" target="_blank">{{ccid.value}}</a><a> </a>
 {{/each}}
-<br>
+<hr>
 PDBe Chemical Component
 <br>
 {{#each data}}
 		<a class="pdbe" href="http://www.ebi.ac.uk/pdbe-srv/pdbechem/chemicalCompound/show/{{ccid.value}}" target="_blank">{{ccid.value}}</a><a> </a>
 {{/each}}
-<br>
+<hr>
 RCSB PDB Chemical Component
 <br>
 {{#each data}}
@@ -92,7 +92,7 @@ RCSB PDB Chemical Component
 {{#glyconaviNothingFound data}}{{/glyconaviNothingFound}}
 <!-- 表示非表示切り替え -->
 
-<br>
+<hr>
 <div class="foot">
 <a href="http://glyconavi.org" target="_blank">from GlycoNAVI</a>
 </div>
